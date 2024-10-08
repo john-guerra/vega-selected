@@ -1,0 +1,39 @@
+{
+  "name": "vega-selected",
+  "version": "0.0.1",
+  "description": "Convert any interactive vega JSON spec into a reactive widget, exposing all its signals",
+  "type": "module",
+  "main": "dist/vegaSelected.min.js",
+  "module": "dist/vegaSelected.es.js",
+  "browser": "dist/vegaSelected.min.js",
+  "unpkg": "dist/vegaSelected.min.js",
+  "jsdelivr": "dist/vegaSelected.min.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "rollup": "^4.20.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup-plugin-ascii": "^0.0.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "vega-embed": "^6.26.0"
+  },
+  "author": {
+    "name": "John Alexis Guerra Gómez",
+    "url": "https://johnguerra.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john-guerra/multi-auto-select/issues"
+  },
+  "homepage": "https://github.com/john-guerra/multi-auto-select"
+}
