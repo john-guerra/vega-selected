@@ -12,21 +12,21 @@ const copyrights = readFileSync("./LICENSE", "utf-8")
   .filter((line) => /^copyright\s+/i.test(line))
   .map((line) => line.replace(/^copyright\s+/i, ""));
 
-const filename = "multiAutoSelect";
+const filename = "vegaSelected";
 
 // Observable Plot style
 const config = {
   input: "src/index.js",
-  // external: ["@observablehq/runtime", "@john-guerra/multi-auto-select"],
+  external: ["vega", "vega-embed"],
   output: {
     indent: false,
     banner: `// ${meta.name} v${meta.version} Copyright ${copyrights.join(", ")}`,
     extend: true,
-    // globals: {
-    //   "@observablehq/runtime": "observableRuntime",
-    //   "@john-guerra/multi-auto-select": "notebookUrl",
-    // },
-    name: "multiAutoSelect",
+    globals: {
+      "vega": "vega",
+      "vega-embed": "vegaEmbed",
+    },
+    name: "vegaSelected",
   },
   plugins: [commonjs(), json(), node()],
 };
