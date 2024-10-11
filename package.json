@@ -1,6 +1,6 @@
 {
   "name": "vega-selected",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert any interactive vega JSON spec into a reactive widget, exposing all its signals",
   "type": "module",
   "main": "dist/vegaSelected.min.js",
